@@ -8,7 +8,7 @@ public class CashbackHackServiceTest {
 
     CashbackHackService service = new CashbackHackService();
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void shouldMessage1000Purchase0() {
         int expected = 1000;
         int actual = service.remain(0);
@@ -16,7 +16,7 @@ public class CashbackHackServiceTest {
         assertEquals(expected, actual);
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void shouldMessage0Purchase1000() {
         int expected = 0;
         int actual = service.remain(1000);
@@ -24,7 +24,7 @@ public class CashbackHackServiceTest {
         assertEquals(expected, actual);
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void shouldMessage500PurchaseAbove1000() {
         int expected = 500;
         int actual = service.remain(1500);
@@ -32,7 +32,7 @@ public class CashbackHackServiceTest {
         assertEquals(expected, actual);
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void shouldMessageLimitPurchaseAboveBoundary() {
         int expected = 1000;
         int actual = service.remain(2000);
@@ -40,7 +40,7 @@ public class CashbackHackServiceTest {
         assertEquals(expected, actual);
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void shouldMessage1Purchase999() {
         int expected = 1;
         int actual = service.remain(999);
@@ -48,7 +48,7 @@ public class CashbackHackServiceTest {
         assertEquals(expected, actual);
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void shouldMessage999Purchase1() {
         int expected = 999;
         int actual = service.remain(1);
@@ -56,7 +56,7 @@ public class CashbackHackServiceTest {
         assertEquals(expected, actual);
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void shouldMessage500Purchase500() {
         int expected = 500;
         int actual = service.remain(500);
